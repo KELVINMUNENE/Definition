@@ -8,3 +8,7 @@ class Words
     end
 
 end
+
+  define_method(:word) do
+    @word
+  end
