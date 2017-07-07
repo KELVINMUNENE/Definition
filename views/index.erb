@@ -1,5 +1,9 @@
-<h1>Success!</h1>
+<h1>List of Words</h1>
 
-<h1>Here is your added word :</h1>
-<h2><%= @word %> %></h2>
-<a href="/">See List of Words </a>
+<ul>
+  <% @all_words.to_a.each() do |word| %>
+  <li><a href="/word/<%= word.id() %>"><%= word.word() %></a></li>
+<% end %>
+</ul>
+
+<a href="/word_form">Add another Word</a>

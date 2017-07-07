@@ -9,8 +9,8 @@ describe(Word) do
 
   describe('#word') do
     it('returns a word') do
-      test_word = Word.new({:word => 'permanently'})
-      expect(test_word.word()).to(eq('permanently'))
+      test_word = Word.new({:word => 'define'})
+      expect(test_word.word()).to(eq('define'))
     end
   end
 
@@ -30,7 +30,7 @@ end
 
   describe('.clear') do
     it('empties out all of the saved words') do
-    test_word = Word.new({:word => "forever"}).save()
+    test_word = Word.new({:word => "define"}).save()
       Word.clear
       expect(Word.all()).to(eq([]))
     end
@@ -38,8 +38,8 @@ end
 
   describe('#add_definition') do
     it('adds a new definition to word') do
-      test_word = Word.new({:word => "permanently"})
-      test_definition = Definition.new({:definition => 'in a way that lasts or remains unchanged indefinitely; for all time.'})
+      test_word = Word.new({:word => "define"})
+      test_definition = Definition.new({:definition => 'define'})
       test_word.add_definition(test_definition)
       expect(test_word.definition()).to(eq([test_definition]))
     end
@@ -47,9 +47,9 @@ end
 
   describe(".find") do
     it("returns a word by its id number") do
-      test_word = Word.new({:word => "forever"})
+      test_word = Word.new({:word => "define"})
       test_word.save()
-      test_word2 = Word.new({:word =>"permanently"})
+      test_word2 = Word.new({:word =>"define"})
       test_word2.save()
       expect(Word.find(test_word.id())).to(eq(test_word))
     end
