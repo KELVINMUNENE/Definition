@@ -4,7 +4,7 @@ require('rspec')
 
   describe('Word') do
     before() do
-      Word.clear()
+      Words.clear()
     end
 
     describe("#word") do
@@ -30,7 +30,11 @@ require('rspec')
       end
     end
 
-
+    describe(".all") do
+          it("is empty at first") do
+            expect(Word.all()).to(eq([]))
+          end
+        end
 
 
   end
