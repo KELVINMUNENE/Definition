@@ -12,3 +12,10 @@ end
   define_method(:word) do
     @word
   end
+
+
+  define_method(:definition) do
+    @definition
+  end
+
+  
