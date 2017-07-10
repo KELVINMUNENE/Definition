@@ -24,5 +24,5 @@ post('/word') do
   Definition.new({:definition => @definition})
   Word.new({:word => @word}).save()
   @words = Word.all()
-  erb(:word)
+  erb(:success)
 end
