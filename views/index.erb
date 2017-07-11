@@ -1,9 +1,9 @@
-<h1>Your Words</h1>
-
+<h1>DICTIONARY</h1>
+<h2>Your words</h2>
 <ul>
   <% @words.each() do |word| %>
   <li><a href="/word/<%= word.id() %>"><%= word.word() %></a></li>
 <% end %>
 </ul>
 
-<a href="/word_form">Add another Word</a>
+<a href="/word_form">Add a Word</a>
